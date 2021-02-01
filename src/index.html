@@ -1,0 +1,120 @@
+---
+layout: default
+title: Frontend Blog
+---
+
+<div class="stories main__box--has-mb">
+    <div class="stories__element">
+        <img class="stories__img" src="./img/stories/1.jpg" alt="" data-modal="story-modal">
+        <p class="stories__text">Отдыхаю на природе</p>
+        <time class="stories__date" datetime="2020-09-21">21.09.2020</time>
+    </div>
+    <div class="stories__element">
+        <img class="stories__img" src="./img/stories/2.jpg" alt="" data-modal="story-modal">
+        <p class="stories__text">Заканчиваю сложный проект</p>
+        <time class="stories__date" datetime="2020-09-15">15.09.2020</time>
+    </div>
+    <div class="stories__element">
+        <img class="stories__img" src="./img/stories/3.jpg" alt="" data-modal="story-modal">
+        <p class="stories__text">Переехал в новую квартиру</p>
+        <time class="stories__date" datetime="2020-09-11">11.09.2020</time>
+    </div>
+    <div class="stories__element">
+        <img class="stories__img" src="./img/stories/4.jpg" alt="" data-modal="story-modal">
+        <p class="stories__text">Осень пришла!</p>
+        <time class="stories__date" datetime="2020-08-28">28.08.2020</time>
+    </div>
+</div> <!-- ./stories -->
+
+<form class="post-input main__box--has-mb" action="/" method="GET">
+    <textarea class="post-input__text-area" data-autoresize name="name" placeholder="Напишите что-нибудь"></textarea>
+    <div class="post-input__buttons">
+        <label class="post-input__label" for="select-photo">
+            <img src="./img/selectPictureButton.svg" alt="">
+        </label>
+        <input class="post-input__file-btn" type="file" name="file" id="select-photo">
+        <label class="post-input__label" for="send-post">
+            <img src="./img/sendMessageButton.svg" alt="">
+        </label>
+        <input class="post-input__photo-btn" type="button" id="send-post" name="name">
+    </div>
+</form>
+
+<div class="post main__box--has-mb">
+    <div class="post__text">
+        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum volutpat orci turpis urna. Et vestibulum, posuere tortor lacinia sit. Sagittis porttitor orci auctor in at tincidunt arcu egestas. Fusce arcu sodales lacinia eu auctor nunc nam id. Diam sit sed volutpat massa. Egestas ornare vel volutpat.</p>
+    </div>
+    <time class="post__time">21.06.2020</time>
+</div>
+
+<div class="post main__box--has-mb">
+    <a class="post__photo-wrapper" href="#">
+        <img class="post__photo" src="./img/posts/1.jpg" alt="">
+    </a>
+    
+    <h2 class="post__title">Как писать код быстро и безболезненно?</h2>
+    <div class="post__text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum volutpat orci turpis urna. Et vestibulum, posuere tortor lacinia sit. Sagittis porttitor orci auctor in at tincidunt arcu egestas. Fusce arcu sodales lacinia eu auctor nunc nam id. Diam sit sed volutpat massa. Egestas ornare vel volutpat.</p>
+    </div>
+    <div class="post__info">
+        <time class="post__time">21.06.2020</time>
+        <ul class="post__tag-list">
+            <li class="post__tag">создание сайтов</li>
+        </ul>
+        <a class="post__open-btn" href="article.html">читать</a>
+    </div>
+</div>
+
+<div class="post main__box--has-mb">
+    <div class="video-wrapper post__video-wrapper">
+        <iframe src="https://www.youtube.com/embed/X4t0JxiBeO0?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <h2 class="post__title">Купил новый ноутбук за 150 000 руб</h2>
+
+    <div class="post__info">
+        <time class="post__time">21.06.2020</time>
+        <ul class="post__tag-list">
+            <li class="post__tag">продвижение видео</li>
+        </ul>
+        <a class="post__open-btn" href="article.html">оставить комментарий</a>
+    </div>
+</div>
+
+<div class="post">
+    <a class="post__photo-wrapper" href="#">
+        <img class="post__photo" src="./img/posts/2.jpg" alt="">
+    </a>
+    
+    <h2 class="post__title">Как я сходил на FrontEnd Conf 2021</h2>
+    <div class="post__text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum volutpat orci turpis urna. Et vestibulum, posuere tortor lacinia sit. Sagittis porttitor orci auctor in at tincidunt arcu egestas. Fusce arcu sodales lacinia eu auctor nunc nam id. Diam sit sed volutpat massa. Egestas ornare vel volutpat.</p>
+    </div>
+    <div class="post__info">
+        <time class="post__time">21.06.2020</time>
+        <ul class="post__tag-list">
+            <li class="post__tag">создание сайтов</li>
+        </ul>
+        <a class="post__open-btn" href="article.html">читать</a>
+    </div>
+</div>
+
+<footer class="footer">
+    <ul class="bottom-nav">
+        <li>
+            <a class="bottom-nav__link" href="#">&lt;</a>
+        </li>
+        <li>
+            <a class="bottom-nav__link" href="#">1</a>
+        </li>
+        <li>
+            <a class="bottom-nav__link bottom-nav__link--active" href="#">2</a>
+        </li>
+        <li>
+            <a class="bottom-nav__link" href="#">3</a>
+        </li>
+        <li>
+            <a class="bottom-nav__link" href="#">&gt;</a>
+        </li>
+    </ul>
+</footer>

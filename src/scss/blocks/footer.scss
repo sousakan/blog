@@ -1,0 +1,11 @@
+@use 'vars' as *;
+
+.footer
+{
+    padding-top: 6rem;
+
+    @include breakpoint($bp-sm)
+    {
+        padding-top: 5rem;
+    }
+}

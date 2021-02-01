@@ -1,0 +1,30 @@
+@use 'vars' as *;
+
+.social
+{
+    width: 10.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    &--modal
+    {
+        width: 22.5rem;
+        margin: 0 auto;
+    }
+
+    &--sidebar
+    {
+        @include breakpoint($bp-md)
+        {
+            display: none;
+        }
+    }
+}
+
+.social__link
+{
+    cursor: pointer;
+
+    border-radius: 50%;
+    box-shadow: 0 .4rem .4rem rgba($black, .25);
+}

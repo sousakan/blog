@@ -1,0 +1,25 @@
+@use 'vars' as *;
+
+.tags
+{
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style-type: none;
+}
+
+.tags__item
+{
+    background-color: #EA8C1E;
+    box-shadow: 0 0.4rem 0.4rem rgba($black, 25%);
+    border-radius: .3rem;
+
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    margin-bottom: .75rem;
+
+    color: $white;
+    font-size: 1.1rem;
+
+    cursor: pointer;
+}

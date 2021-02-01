@@ -1,0 +1,25 @@
+$white: #fff;
+$black: #000;
+$primary: #202020;
+$secondary: #0D0D0D;
+$blue: #3137C9;
+$red: #ED3024;
+
+$sidebar-width: 30rem;
+$header-height: 4rem;
+
+
+//Breakpoints
+
+$bp-md: 1000px;
+$bp-sm: 720px;
+$bp-vsm: 550px;
+
+//Mixins
+@mixin breakpoint($bp)
+{
+    @media screen and (max-width: $bp)
+    {
+        @content;
+    } 
+}

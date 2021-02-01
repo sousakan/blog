@@ -1,0 +1,52 @@
+@use 'vars' as *;
+
+.header
+{
+    width: calc(100% - #{$sidebar-width});
+    height: 4rem;
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: $secondary;
+    box-shadow: 0 0.5rem 2.2rem rgba($black, .25);
+
+    @include breakpoint($bp-md)
+    {
+        width: 100%;
+    }
+}
+
+.header__search
+{
+    width: 21.2rem;
+    padding-left: 2rem;
+    
+    font-style: inherit;
+    font-size: 1.2rem;
+    color: $white;
+
+    background-color: $primary;
+    
+    border: none;
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+
+    &::placeholder
+    {
+        color: rgba($white, .4);
+    }
+
+    @include breakpoint($bp-sm)
+    {
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,78 @@
+@use 'vars' as *;
+
+.post-input
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 7.5rem;
+
+    padding: 1.5rem 2rem;
+    background-color: #121212;
+    border-radius: .5rem;
+
+    @include breakpoint($bp-vsm)
+    {
+        padding: 1.5rem 1rem;
+    }
+}
+
+.post-input__text-area
+{
+    background: none;
+    border: none;
+    outline: none;
+
+    flex-grow: 1;
+    height: 4.5rem;
+    padding: 1.3rem 1rem;
+    resize: none;
+    overflow: hidden;
+
+    color: $white;
+    font-size: 1.5rem;
+
+    &::placeholder
+    {
+        color: #D2D2D2;
+    }
+}
+
+.post-input__buttons
+{
+    display: flex;
+    justify-content: space-between;
+
+    width: 10.3rem;
+
+    @include breakpoint($bp-vsm)
+    {
+        width: 7.5rem;
+
+        padding-bottom: .5rem;
+    }
+}
+
+.post-input__label
+{
+    border-radius: 50%;
+    box-shadow: 0 .4rem .4rem rgba($black, .25);
+    cursor: pointer;
+    
+    img
+    {
+        display: block;
+
+        @include breakpoint($bp-vsm)
+        {
+            width: 3.5rem;
+            height: 3.5srem;
+        }
+    }
+}
+
+.post-input__file-btn,
+.post-input__photo-btn
+{
+    display: none;
+}

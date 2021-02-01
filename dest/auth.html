@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title></head>
+<body>
+
+<header class="header">
+    <div class="burger" id="burger">
+        <span class="burger__line"></span>
+    </div>
+    <nav class="nav nav--horizontal">
+        <ul class="nav__list">
+            <li class="nav__element">
+                <a class="nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="nav__element">
+                <a class="nav__link nav__link--has-subnav" href="#">Статьи</a>
+                <ul class="nav__sub-list">
+                    <li class="nav__sub-element">
+                        <a href="#" class="nav__sub-link">Создание сайтов</a>
+                    </li>
+                    <li class="nav__sub-element">
+                        <a href="#" class="nav__sub-link">Интернет-маркетинг</a>
+                    </li>
+                    <li class="nav__sub-element">
+                        <a href="#" class="nav__sub-link">Продвижение видео</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__element">
+                <a class="nav__link" href="#">Обо мне</a>
+            </li>
+            <li class="nav__element">
+                <a class="nav__link" href="#">Реклама</a>
+            </li>
+            <li class="nav__element">
+                <a class="nav__link" href="profile.html">Профиль</a>
+            </li>
+        </ul>
+    </nav>
+    <input class="header__search" type="search" placeholder="Поиск по блогу">
+</header>
+<aside class="sidebar" id="sidebar">
+
+        <div class="sidebar__content">
+        <header class="sidebar__header">
+            <img class="sidebar__image" src="./img/sidebar/image.jpg" alt="">
+        </header>
+        <div class="profile sidebar__profile">
+            <img class="profile__avatar" src="./img/sidebar/avatar.jpg" alt="">
+            <div>
+                <h2 class="profile__name">Ратмир Шарафутдинов</h2>
+                <h3 class="profile__about">блог front-end разработчика</h3>
+            </div>
+                <div class="social social--sidebar">
+                <img class="social__link" src="./img/sidebar/instagram.svg" alt="">
+                <img class="social__link" src="./img/sidebar/vk.svg" alt="">
+                <img class="social__link" src="./img/sidebar/pinterest.svg" alt="">
+            </div>
+        </div>
+
+            <nav class="nav nav--vertical">
+            <ul class="nav__list">
+                <li class="nav__element">
+                    <a class="nav__link nav__link--has-subnav" href="index.html">Статьи</a>
+                    <ul class="nav__sub-list">
+                        <li class="nav__sub-element">
+                            <a href="article.html" class="nav__sub-link">Создание сайтов</a>
+                        </li>
+                        <li class="nav__sub-element">
+                            <a href="article.html" class="nav__sub-link">Интернет-маркетинг</a>
+                        </li>
+                        <li class="nav__sub-element">
+                            <a href="article.html" class="nav__sub-link">Продвижение видео</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__element">
+                    <a class="nav__link" href="results.html">Обо мне</a>
+                </li>
+                <li class="nav__element">
+                    <a class="nav__link" href="auth.html">Реклама</a>
+                </li>
+                <li class="nav__element">
+                    <a class="nav__link" href="profile.html">Профиль</a>
+                </li>
+            </ul>
+        </nav>
+
+            <div class="sidebar__about">
+            <p>Front-end разработчик. Практик верстки сайтов. Созданием сайтов занимаюсь с 2012 года. Работал в нескольких ИТ компаниях и наработал более 10 000 часов в создании сайтов различной сложности.</p>
+        </div>
+        <footer class="sidebar__footer">
+            <div class="sidebar__footer-contact">
+                <a class="button button--red" href="works.html">Мои работы</a>
+                <button class="button button--blue" data-modal="contact-modal">Написать мне</button>
+            </div>
+        </footer>
+    </div>
+
+    <div class="sidebar__overlay"></div>
+
+</aside>
+
+<div class="page">
+    <main class="main">
+
+                <h2 class="main__title main__title--big-mb main__title--center">Вход</h2>
+
+                <form class="form form--auth main__box--has-small-mb" action="/">
+            <input class="form__text-field" type="email" placeholder="Почта" value="alex.provo@mail.com">
+            <input class="form__text-field" type="password" placeholder="Новый пароль">
+            <input class="form__button" type="button" value="Войти">
+        </form>
+
+                <div class="links">
+            <a class="links__item" href="#">восстановить</a>
+            <a class="links__item" href="#">регистрация</a>
+        </div>
+    </main>
+</div>
+
+<div class="modal" id="contact-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <form class="form form--modal modal__form" action="/">
+                <input class="form__text-field" type="text" placeholder="Ваше имя" value="Ратмир">
+                <input class="form__text-field" type="email" placeholder="Ваш e-mail">
+                <input class="form__text-field" type="text" placeholder="Текст сообщения">
+                <input class="form__button" type="button" value="Отправить">
+            </form>
+            <div class="modal-info">
+                <div>
+                    <span class="modal-info__text">e-mail: </span><a class="modal-info__link" href="mailto:info@mywebsite.ru">info@mywebsite.ru</a>
+                </div>
+                <div>
+                    <span class="modal-info__text">тел: </span><a class="modal-info__link" href="tel:+94323285622">+943-232-856-22</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="modal modal--share" id="share-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="social social--modal">
+                <img class="social__link" src="./img/modal-links/1.svg" alt="">
+                <img class="social__link" src="./img/modal-links/2.svg" alt="">
+                <img class="social__link" src="./img/modal-links/3.svg" alt="">
+                <img class="social__link" src="./img/modal-links/4.svg" alt="">
+            </div>
+        </div>
+    </div>
+</div><div class="modal modal--story" id="story-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <img src="https://via.placeholder.com/430x600" alt="">
+
+                    </div>
+    </div>
+</div>
+<script src="./js/app.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+@use 'vars' as *;
+
+.bottom-nav
+{
+    display: flex;
+    justify-content: space-between;
+    width: 24rem;
+    margin: 0 auto;
+
+    list-style-type: none;
+}
+
+.bottom-nav__link
+{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: .3rem;
+    background-color: $secondary;
+    box-shadow: 0 0 1rem rgba($black, .15);
+
+    color: $white;
+    font-size: 1.4rem;
+    text-decoration: none;
+
+    transition: background-color .2s linear;
+
+    &:hover
+    {
+        background-color: lighten($black, 10%);
+    }
+
+    &--active
+    {
+        background-color: #104BE3;
+
+        &:hover
+        {
+            background-color: darken(#104BE3, 5%);
+        }
+    }
+}

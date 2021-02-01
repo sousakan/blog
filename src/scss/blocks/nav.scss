@@ -1,0 +1,222 @@
+@use 'vars' as *;
+
+.nav
+{
+    &--horizontal
+    {
+        flex-grow: 1;
+        max-height: 100%;
+
+        @include breakpoint($bp-md)
+        {
+            display: none;
+        }
+    }
+
+    &--vertical
+    {
+        display: none;
+        padding: 3rem 3rem 2.5rem;
+
+        @include breakpoint($bp-md)
+        {
+            display: block;
+        }
+    }
+}
+
+.nav__list
+{
+    display: flex;
+    list-style-type: none;
+
+    .nav--horizontal &
+    {
+        height: 100%;
+    
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+        text-transform: uppercase;
+        
+        justify-content: flex-start;
+    }
+
+    .nav--vertical &
+    {
+        font-size: 1.6rem;
+        font-weight: 300;
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.nav__element
+{ 
+    cursor: pointer;
+
+    position: relative;
+
+    .nav--horizontal &
+    {
+        transition: background .2s linear;
+
+        &:last-child
+        {
+            margin-left: auto;
+        }
+
+        &:hover
+        {
+            background-color: $blue;
+    
+            .nav__sub-list
+            {
+                display: block;
+            }
+        }
+    }
+
+    .nav--vertical &
+    {
+        margin-bottom: 1.7rem;
+        -webkit-tap-highlight-color: transparent;
+
+        &:last-child
+        {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.nav__link
+{
+    color: $white;
+    text-decoration: none;
+    display: block;
+
+    .nav--horizontal &
+    {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0 1.3rem;
+
+        &--has-subnav
+        {
+            position: relative;
+    
+            padding-right: 3.3rem;
+
+            &::after
+            {
+                content: "";
+
+                display: block;
+                position: absolute;
+    
+                width: 0;
+                height: 0;
+                right: 1.1rem;
+                top: 50%;
+                transform: translateY(-50%);
+    
+                border-style: solid;
+                border-width: 5px 4.5px 0 4.5px;
+                border-color: #ffffff transparent transparent transparent;
+            }
+        }
+    }
+
+    .nav--vertical &
+    {
+        transition: color .1s linear;
+
+        &:hover
+        {
+            color: #107EFF;
+        }
+
+        &--has-subnav
+        {
+            margin-bottom: 1.7rem;
+        }
+    }
+}
+
+.nav__sub-list
+{
+    list-style-type: none;
+    color: $white;
+    text-decoration: none;
+    text-transform: none;
+
+    .nav--horizontal &
+    {
+        position: absolute;
+        top: 100%;
+        display: none;
+    
+        width: 16.5rem;
+        background-color: $blue; 
+        box-shadow: 0 .8rem .8rem rgba($black, .2);
+    }
+
+    .nav--vertical &
+    {
+        padding-left: 1.7rem;
+    }
+}
+
+.nav__sub-element
+{
+    .nav--horizontal &
+    {
+        padding: .75rem 0 .75rem 1.2rem;
+
+        transition: background-color .2s linear;
+
+        &:hover
+        {
+            background-color: darken($blue, 5%);
+        }
+    }
+
+    .nav--vertical &
+    {
+        margin-bottom: 1.5rem;
+
+        &:last-child
+        {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.nav__sub-link
+{
+    text-decoration: none;
+    color: inherit;
+
+    display: block;
+
+    .nav--horizontal &
+    {
+        font-size: 1.2rem;
+    }
+
+    .nav--vertical &
+    {
+        font-size: 1.5rem;
+        font-weight: 300;
+
+        transition: color .1s linear;
+
+        &:hover
+        {
+            color: #107EFF;
+        }
+    }
+}   

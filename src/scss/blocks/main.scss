@@ -1,0 +1,65 @@
+@use 'vars' as *;
+
+.main
+{
+    padding: 6rem 5rem 8rem;
+    margin: 0 auto;
+
+    max-width: 70rem;
+    height: 100%;
+
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+    
+    @include breakpoint($bp-sm)
+    {
+        padding: 2rem 1.5rem 5rem;
+    }
+}
+
+.main__box
+{
+    &--has-mb
+    {
+        margin-bottom: 3rem;
+    }
+
+    &--has-small-mb
+    {
+        margin-bottom: 2rem;
+    }
+}
+
+.main__title
+{
+    font-size: 2.1rem;
+    font-weight: normal;
+    line-height: 2.1rem;
+    color: $white;
+
+    margin-bottom: 3rem;
+
+    &--big-mb
+    {
+        margin-bottom: 6rem;
+    }
+
+    &--center
+    {
+        text-align: center;
+    }
+
+    @include breakpoint($bp-sm)
+    {
+        text-align: center;
+        
+        &--big-mb
+        {
+            margin-bottom: 2rem;
+        }
+    }
+}

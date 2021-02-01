@@ -1,0 +1,12 @@
+@use 'vars' as *;
+
+.page
+{
+    padding-top: $header-height;
+    padding-left: $sidebar-width;
+
+    @include breakpoint($bp-md)
+    {
+        padding-left: 0;
+    }
+}

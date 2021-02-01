@@ -1,0 +1,50 @@
+@use '../vars' as *;
+
+.burger 
+{
+    width: 3rem;
+    height: 2rem;
+
+    position: relative;
+    top: 1rem;
+    left: 1.5rem;
+    cursor: pointer;
+    display: none;
+
+    &::before,
+    &::after
+    {
+        content: "";
+        position: absolute;
+
+        width: 3rem;
+        height: 0.2rem;
+        background-color: $white;
+    }
+
+    &::before
+    {
+        top: 0;
+    }
+
+    &::after
+    {
+        bottom: 0;
+    }
+
+    @include breakpoint($bp-md)
+    {
+        display: block;
+    }
+}
+
+.burger__line
+{
+    width: 100%;
+    height: 0.2rem;
+    background-color: $white;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

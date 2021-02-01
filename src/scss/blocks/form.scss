@@ -1,0 +1,146 @@
+@use 'vars' as *;
+
+.form
+{
+    &--profile
+    {
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint($bp-sm)
+        {
+            flex-direction: column-reverse;
+            align-items: stretch;
+        }
+    }
+
+    &--auth
+    {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    &--modal
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.form__text-field
+{
+    background: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    
+    color: $white;
+    font-size: 1.4rem;
+    
+    display: block;
+    width: 100%;
+    height: 3rem;
+    
+    border-bottom: 1px solid #3F3F3F;
+    transition: border .2s ease-out;
+
+    margin-bottom: 1.2rem;
+    padding: .7rem 0;
+
+    &--textarea
+    {
+        resize: none;
+    }
+
+    &::placeholder
+    {
+        color: color($white, .2);
+    }
+
+    &:focus
+    {
+        border-bottom: 1px solid #107EFF;
+    }
+
+    .form--profile &
+    {
+        width: 34rem;
+        margin-bottom: 2.5rem;
+
+        @include breakpoint($bp-sm)
+        {
+            width: 100%;
+        }
+    }
+
+    .form--auth &
+    {
+        width: 28rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .form--modal &
+    {
+        width: 28rem;
+        margin-bottom: 2.5rem;
+
+        @include breakpoint($bp-sm)
+        {
+            width: 100%;
+        }
+    }
+}
+
+.form__button
+{
+    background-color: $blue;
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    box-shadow: 0 .4rem 1.5rem -0.7rem rgba($blue, .3);
+
+    padding: .85rem 1.51rem;
+    cursor: pointer;
+
+    font-size: 1.2rem;
+    color: $white;
+
+    transition: background-color .2s linear;
+
+    &:hover
+    {
+        background-color: darken($blue, 5%);
+    }
+}
+
+.form__upload-button
+{   
+    text-decoration: underline;
+    color: #107EFF;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    transition: color .2s linear;
+
+    &:hover
+    {
+        text-decoration: none;
+        color: darken(#107EFF, 10%)
+    }
+
+    input
+    {
+        display: none;
+    }
+
+    .form--profile &
+    {
+        @include breakpoint($bp-sm)
+        {
+            display: block;
+            width: 11rem;
+            margin: 0 auto;
+        }
+    }
+}

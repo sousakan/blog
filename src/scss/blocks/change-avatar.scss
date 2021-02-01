@@ -1,0 +1,32 @@
+@use 'vars' as *;
+
+.change-avatar
+{
+    .form--profile &
+    {
+        @include breakpoint($bp-sm)
+        {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.change-avatar__photo
+{
+    width: 15rem;
+    height: 15rem;
+
+    box-shadow: 0 0.5rem 1.5rem rgba($black, .25);
+    display: block;
+
+    margin-bottom: 1.5rem;
+
+    .form--profile &
+    {
+        @include breakpoint($bp-sm)
+        {
+            margin: 0 auto 1.5rem;
+        }
+    }
+}
+

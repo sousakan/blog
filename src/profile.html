@@ -1,0 +1,23 @@
+---
+layout: default
+title: Profile
+---
+
+<h2 class="main__title main__title--big-mb">Профиль</h2>
+
+<form class="form form--profile" action="/">
+    <div>
+        <input class="form__text-field" type="text" placeholder="Имя" value="Александр Провостин">
+        <input class="form__text-field" type="email" placeholder="Почта" value="alex.provo@mail.com">
+        <input class="form__text-field" type="password" placeholder="Новый пароль">
+        <input class="form__text-field" type="password" placeholder="Подтвердите пароль">
+        <input class="form__button" type="button" value="Сохранить">
+    </div>
+    <div class="change-avatar">
+        <img class="change-avatar__photo" src="./img/avatar.jpg" alt="">
+        <label class="form__upload-button">
+            выбрать аватар
+            <input type="file">      
+        </label>
+    </div>
+</form>

@@ -1,0 +1,44 @@
+@use 'vars' as *;
+
+.button
+{
+    padding: 1.3rem 0;
+    width: 12rem;
+
+    border: none;
+    border-radius: 2.5rem;
+    outline: none;
+    text-decoration: none;
+    color: $white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: background-color .2s linear;
+    
+
+    &--red
+    {
+        background-color: $red;
+        box-shadow: 0 .7rem 1.7rem -1rem rgba(#F23F3F, .2);
+
+        &:hover
+        {
+            background-color: darken($red, 10%);
+        }
+    }
+
+    &--blue
+    {
+        background-color: $blue;
+        box-shadow: 0 .7rem 1.7rem -1rem rgba(#2054DB, .35);
+
+        &:hover
+        {
+            background-color: darken($blue, 5%);
+        }
+    }
+}
